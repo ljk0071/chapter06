@@ -10,15 +10,13 @@ import java.io.OutputStreamWriter;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Scanner;
 
 public class Server {
 
 	public static void main(String[] args)throws IOException {
 		
 		ServerSocket serverSocket = new ServerSocket();
-		serverSocket.bind(new InetSocketAddress("192.168.0.34", 10001));
-		Scanner sc= new Scanner(System.in);
+		serverSocket.bind(new InetSocketAddress("192.168.0.55", 10001));
 		
 		System.out.println("<서버시작>");
 		System.out.println("================================");
@@ -48,7 +46,6 @@ public class Server {
 			bw.flush();
 		}
 		
-		sc.close();
 		bw.close();
 		socket.close();
 		serverSocket.close();

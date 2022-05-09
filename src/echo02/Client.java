@@ -1,4 +1,4 @@
-package echo01;
+package echo02;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -20,7 +20,7 @@ public class Client {
 		System.out.println("<클라이언트 시작>");
 		System.out.println("================================");
 		System.out.println("[서버에 연결을 요청합니다.]");
-		socket.connect(new InetSocketAddress("192.168.0.55", 10001));
+		socket.connect(new InetSocketAddress("192.168.0.58", 10001));
 		System.out.println("[서버에 연결 되었습니다.]");
 		
 		OutputStream os = socket.getOutputStream();
@@ -39,7 +39,7 @@ public class Client {
 				break;
 			}
 			
-			bw.write(str);
+			bw.write("[이준규]"+str);
 			bw.newLine();
 			bw.flush();
 			
